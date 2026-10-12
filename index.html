@@ -4,8 +4,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Sunnatbek | Web Developer Portfolio</title>
+	<title>Mening Portfoliom | Portfolio Website</title>
+	<!-- CSS fayl -->
 	<link rel="stylesheet" href="style.css">
+	<!-- FontAwesome ikonkalari -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -13,15 +16,36 @@
 	<!-- Header va Navigatsiya -->
 	<header>
 		<nav class="navbar">
-			<div class="logo">Sunnatbek.dev</div>
+			<a href="#" class="logo"><i class="fa-solid fa-code"></i> Portfolio<span>.</span></a>
 			<ul class="nav-links">
-				<li><a href="#hero">Bosh sahifa</a></li>
-				<li><a href="#about">Men haqimda</a></li>
-				<li><a href="#skills">Ko'nikmalar</a></li>
-				<li><a href="#projects">Loyihalar</a></li>
-				<li><a href="#education">Ta'lim</a></li>
-				<li><a href="#contact">Aloqa</a></li>
+				<li><a href="#about"><i class="fa-solid fa-user"></i> <span class="lang-uz">Men haqimda</span><span
+							class="lang-ru" style="display:none;">О обо мне</span><span class="lang-en"
+							style="display:none;">About</span></a></li>
+				<li><a href="#skills"><i class="fa-solid fa-tools"></i> <span class="lang-uz">Ko'nikmalar</span><span
+							class="lang-ru" style="display:none;">Навыки</span><span class="lang-en"
+							style="display:none;">Skills</span></a></li>
+				<li><a href="#projects"><i class="fa-solid fa-briefcase"></i> <span
+							class="lang-uz">Loyihalar</span><span class="lang-ru"
+							style="display:none;">Проекты</span><span class="lang-en"
+							style="display:none;">Projects</span></a></li>
+				<li><a href="#education"><i class="fa-solid fa-graduation-cap"></i> <span
+							class="lang-uz">Ta'lim</span><span class="lang-ru"
+							style="display:none;">Образование</span><span class="lang-en"
+							style="display:none;">Education</span></a></li>
+				<li><a href="#contact"><i class="fa-solid fa-envelope"></i> <span class="lang-uz">Aloqa</span><span
+							class="lang-ru" style="display:none;">Контакты</span><span class="lang-en"
+							style="display:none;">Contact</span></a></li>
 			</ul>
+
+			<div class="header-right">
+				<!-- Tilni o'zgartirish tugmasi -->
+				<select id="languageSelector" class="lang-select">
+					<option value="uz">🇺🇿 O'zbekcha</option>
+					<option value="ru">🇷🇺 Русский</option>
+					<option value="en">🇬🇧 English</option>
+				</select>
+				<div class="menu-btn"><i class="fa-solid fa-bars"></i></div>
+			</div>
 		</nav>
 	</header>
 
@@ -29,95 +53,352 @@
 		<!-- 1. Hero bo'limi -->
 		<section id="hero" class="hero">
 			<div class="hero-content">
-				<h1>Salom, men <span class="highlight">Sunnatbek</span></h1>
-				<p>Aspiring Web Developer</p>
-				<p class="tagline"><i>Learning today, building tomorrow.</i></p>
-				<a href="#projects" class="btn">Loyihalarni ko'rish</a>
+				<span class="badge"><i class="fa-solid fa-wand-magic-sparkles"></i> <span class="lang-uz">Xush
+						kelibsiz!</span><span class="lang-ru" style="display:none;">Добро пожаловать!</span><span
+						class="lang-en" style="display:none;">Welcome!</span></span>
+				<h1><span class="lang-uz">Salom, men</span><span class="lang-ru" style="display:none;">Привет,
+						я</span><span class="lang-en" style="display:none;">Hi, I'm</span> <span
+						class="highlight">Ismingiz Familiyangiz</span></h1>
+				<h2><i class="fa-solid fa-laptop-code"></i> <span class="lang-uz">Front-End Dasturchi &
+						O'quvchi</span><span class="lang-ru" style="display:none;">Front-End Разработчик &
+						Студент</span><span class="lang-en" style="display:none;">Front-End Developer & Student</span>
+				</h2>
+				<p><span class="lang-uz">Kelajak texnologiyalarini o'rganib, zamonaviy va foydali veb-ilovalar
+						yarataman. Shaxsiy brendim va loyihalarim olamiga xush kelibsiz!</span><span class="lang-ru"
+						style="display:none;">Изучаю технологии будущего и создаю современные веб-приложения. Добро
+						пожаловать в мой мир проектов!</span><span class="lang-en" style="display:none;">Learning future
+						technologies and building modern web applications. Welcome to my world!</span></p>
+				<div class="hero-btns">
+					<a href="#projects" class="btn primary-btn"><i class="fa-solid fa-eye"></i> <span
+							class="lang-uz">Loyihalarni ko'rish</span><span class="lang-ru"
+							style="display:none;">Смотреть проекты</span><span class="lang-en"
+							style="display:none;">View Projects</span></a>
+					<a href="#contact" class="btn secondary-btn"><i class="fa-solid fa-paper-plane"></i> <span
+							class="lang-uz">Bog'lanish</span><span class="lang-ru"
+							style="display:none;">Связаться</span><span class="lang-en" style="display:none;">Contact
+							Me</span></a>
+				</div>
 			</div>
 			<div class="hero-img">
-				<img src="images/me.jpg" alt="Sunnatbek rasmi">
+				<div class="img-box">
+					<img src="images/me.jpg" alt="Rasmim"
+						onerror="this.src='https://via.placeholder.com/350x350/0f766e/ffffff?text=Mening+Rasmim'">
+					<div class="floating-sticker s1">🚀</div>
+					<div class="floating-sticker s2">💻</div>
+					<div class="floating-sticker s3">⭐</div>
+				</div>
 			</div>
 		</section>
 
 		<!-- 2. Men haqimda -->
 		<section id="about" class="about">
-			<h2>Men haqimda</h2>
-			<p>Hello! My name is Sunnatbek, and I am a student from Uzbekistan. I have basic knowledge of HTML, CSS, and
-				JavaScript. I am interested in web development and programming. My goal is to improve my programming
-				skills, build useful projects, and create modern websites.</p>
+			<div class="section-title">
+				<span><i class="fa-solid fa-user-tag"></i> <span class="lang-uz">BO'LIM 2</span><span class="lang-ru"
+						style="display:none;">РАЗДЕЛ 2</span><span class="lang-en" style="display:none;">SECTION
+						2</span></span>
+				<h2><span class="lang-uz">Men haqimda</span><span class="lang-ru" style="display:none;">О обо
+						мне</span><span class="lang-en" style="display:none;">About Me</span></h2>
+			</div>
+			<div class="about-container">
+				<div class="about-card glass">
+					<div class="about-icon"><i class="fa-solid fa-address-card"></i></div>
+					<p class="lang-uz">Men 11-sinf o'quvchisi va yosh Front-End dasturchiman. Dasturlashga bo'lgan
+						qiziqishim tufayli HTML, CSS, JavaScript va zamonaviy freymvorklarni o'rganib kelmoqdaman. Bo'sh
+						vaqtlarimda qiziqarli veb-saytlar yasash va algoritmlar yechish bilan shug'ullanaman. Maqsadim —
+						xalqaro darajadagi malakali IT mutaxassisi bo'lish va dunyoni o'zgartiruvchi loyihalar yaratish.
+					</p>
+					<p class="lang-ru" style="display:none;">Я ученик 11 класса и начинающий Front-End разработчик.
+						Благодаря интересу к программированию я изучаю HTML, CSS, JavaScript и современные фреймворки. В
+						свободное время создаю интересные веб-сайты и решаю алгоритмические задачи. Моя цель — стать
+						квалифицированным IT-специалистом мирового уровня.</p>
+					<p class="lang-en" style="display:none;">I am an 11th-grade student and a junior Front-End
+						developer. Driven by my passion for coding, I study HTML, CSS, JavaScript, and modern
+						frameworks. In my free time, I build engaging websites and solve algorithmic puzzles. My goal is
+						to become a world-class IT professional.</p>
+				</div>
+			</div>
 		</section>
 
 		<!-- 3. Ko'nikmalar -->
 		<section id="skills" class="skills">
-			<h2>Ko'nikmalarim</h2>
+			<div class="section-title">
+				<span><i class="fa-solid fa-gear"></i> <span class="lang-uz">BO'LIM 3</span><span class="lang-ru"
+						style="display:none;">РАЗДЕЛ 3</span><span class="lang-en" style="display:none;">SECTION
+						3</span></span>
+				<h2><span class="lang-uz">Ko'nikmalar</span><span class="lang-ru"
+						style="display:none;">Навыки</span><span class="lang-en" style="display:none;">Skills</span>
+				</h2>
+			</div>
 			<div class="skills-grid">
-				<div class="skill-card">HTML — Basic</div>
-				<div class="skill-card">CSS — Basic</div>
-				<div class="skill-card">JavaScript — Basic</div>
-				<div class="skill-card">Web Development — Beginner</div>
-				<div class="skill-card">Languages: Uzbek, English, Russian</div>
+				<div class="skill-card glass">
+					<i class="fa-brands fa-html5" style="color: #e34f26;"></i>
+					<h3>HTML5</h3>
+					<p><span class="lang-uz">Semantik UI</span><span class="lang-ru" style="display:none;">Семантический
+							UI</span><span class="lang-en" style="display:none;">Semantic UI</span></p>
+				</div>
+				<div class="skill-card glass">
+					<i class="fa-brands fa-css3-alt" style="color: #264de4;"></i>
+					<h3>CSS3 / Tailwind</h3>
+					<p><span class="lang-uz">Responsiv Style</span><span class="lang-ru"
+							style="display:none;">Адаптивный стиль</span><span class="lang-en"
+							style="display:none;">Responsive Style</span></p>
+				</div>
+				<div class="skill-card glass">
+					<i class="fa-brands fa-js" style="color: #f7df1e;"></i>
+					<h3>JavaScript</h3>
+					<p>ES6+ & Logic</p>
+				</div>
+				<div class="skill-card glass">
+					<i class="fa-brands fa-react" style="color: #61dafb;"></i>
+					<h3>ReactJS</h3>
+					<p>UI Components</p>
+				</div>
+				<div class="skill-card glass">
+					<i class="fa-brands fa-python" style="color: #306998;"></i>
+					<h3>Python</h3>
+					<p>Backend & Scripts</p>
+				</div>
+				<div class="skill-card glass">
+					<i class="fa-brands fa-figma" style="color: #f24e1e;"></i>
+					<h3>Figma</h3>
+					<p>UI/UX Prototype</p>
+				</div>
+				<div class="skill-card glass">
+					<i class="fa-brands fa-git-alt" style="color: #f05032;"></i>
+					<h3>Git & GitHub</h3>
+					<p><span class="lang-uz">Versiyalarni boshqarish</span><span class="lang-ru"
+							style="display:none;">Контроль версий</span><span class="lang-en"
+							style="display:none;">Version Control</span></p>
+				</div>
+				<div class="skill-card glass">
+					<i class="fa-solid fa-database" style="color: #4db33d;"></i>
+					<h3>MongoDB / SQL</h3>
+					<p><span class="lang-uz">Ma'lumotlar bazasi</span><span class="lang-ru" style="display:none;">Базы
+							данных</span><span class="lang-en" style="display:none;">Databases</span></p>
+				</div>
 			</div>
 		</section>
 
 		<!-- 4. Loyihalar -->
-		<section id="projects" class="projects-section">
-			<h2>Loyihalarim</h2>
-			<div class="projects">
-				<div class="project-card">
-					<img src="images/project1.png" alt="Personal Portfolio">
-					<h3>Personal Portfolio Website</h3>
-					<p><strong>Status:</strong> In progress<br><strong>Purpose:</strong> To introduce myself and present
-						my skills and projects.<br><strong>Technologies:</strong> HTML, CSS, JavaScript.</p>
-					<a href="https://github.com/LOGIN/portfolio" target="_blank" class="project-link">GitHub'da
-						ko'rish</a>
+		<section id="projects" class="projects">
+			<div class="section-title">
+				<span><i class="fa-solid fa-folder-open"></i> <span class="lang-uz">BO'LIM 4</span><span class="lang-ru"
+						style="display:none;">РАЗДЕЛ 4</span><span class="lang-en" style="display:none;">SECTION
+						4</span></span>
+				<h2><span class="lang-uz">Loyihalar</span><span class="lang-ru"
+						style="display:none;">Проекты</span><span class="lang-en" style="display:none;">Projects</span>
+				</h2>
+			</div>
+			<div class="projects-grid">
+				<!-- 1-loyiha -->
+				<div class="project-card glass">
+					<div class="project-img">
+						<img src="images/project1.png" alt="Loyiha 1"
+							onerror="this.src='https://via.placeholder.com/400x220/1f2937/0f766e?text=Online+Shop'">
+					</div>
+					<div class="project-info">
+						<h3><i class="fa-solid fa-cart-shopping"></i> Online Shop Website</h3>
+						<p><strong><span class="lang-uz">Muammo</span><span class="lang-ru"
+									style="display:none;">Проблема</span><span class="lang-en"
+									style="display:none;">Problem</span>:</strong> <span class="lang-uz">Mahalliy
+								do'konlarning onlayn savdo platformasi yo'qligi.</span><span class="lang-ru"
+								style="display:none;">Отсутствие онлайн платформы у местных магазинов.</span><span
+								class="lang-en" style="display:none;">Lack of online shopping platform for local
+								stores.</span></p>
+						<p><strong><span class="lang-uz">Yechim</span><span class="lang-ru"
+									style="display:none;">Решение</span><span class="lang-en"
+									style="display:none;">Solution</span>:</strong> HTML/CSS va JS yordamida interaktiv
+							savdo sayti yaratildi.</p>
+						<p><strong><span class="lang-uz">Natija</span><span class="lang-ru"
+									style="display:none;">Результат</span><span class="lang-en"
+									style="display:none;">Result</span>:</strong> <span class="lang-uz">Mijozlar
+								buyurtmani to'g'ridan-to'g'ri berish imkoniga ega bo'ldi.</span><span class="lang-ru"
+								style="display:none;">Клиенты могут напрямую оформлять заказы.</span><span
+								class="lang-en" style="display:none;">Customers can place orders directly.</span></p>
+						<div class="project-links">
+							<a href="#" target="_blank" class="btn-sm primary-btn"><i class="fa-solid fa-globe"></i>
+								Demo</a>
+							<a href="#" target="_blank" class="btn-sm secondary-btn"><i class="fa-brands fa-github"></i>
+								Code</a>
+						</div>
+					</div>
 				</div>
-				<div class="project-card">
-					<img src="images/project1.png" alt="Web Application">
-					<h3>Interactive Web App</h3>
-					<p><strong>Status:</strong> Planned — not completed<br><strong>Purpose:</strong> To build a
-						functional and responsive utility web tool.<br><strong>Technologies:</strong> HTML, CSS,
-						JavaScript.</p>
-					<a href="https://github.com/LOGIN/portfolio" target="_blank" class="project-link">GitHub'da
-						ko'rish</a>
+
+				<!-- 2-loyiha -->
+				<div class="project-card glass">
+					<div class="project-img">
+						<img src="https://via.placeholder.com/400x220/1f2937/0f766e?text=Weather+App" alt="Loyiha 2">
+					</div>
+					<div class="project-info">
+						<h3><i class="fa-solid fa-cloud-sun"></i> Weather Forecast App</h3>
+						<p><strong><span class="lang-uz">Muammo</span><span class="lang-ru"
+									style="display:none;">Проблема</span><span class="lang-en"
+									style="display:none;">Problem</span>:</strong> <span class="lang-uz">Ob-havoni
+								tezkor va aniq ko'rsatuvchi sodda ilova zarurati.</span><span class="lang-ru"
+								style="display:none;">Потребность в быстром приложении погоды.</span><span
+								class="lang-en" style="display:none;">Need for a fast weather app.</span></p>
+						<p><strong><span class="lang-uz">Yechim</span><span class="lang-ru"
+									style="display:none;">Решение</span><span class="lang-en"
+									style="display:none;">Solution</span>:</strong> Weather API va JavaScript orqali
+							ob-havo vidjeti.</p>
+						<p><strong><span class="lang-uz">Natija</span><span class="lang-ru"
+									style="display:none;">Результат</span><span class="lang-en"
+									style="display:none;">Result</span>:</strong> <span class="lang-uz">Istalgan shahar
+								ob-havosini real vaqtda ko'rish imkoniyati.</span><span class="lang-ru"
+								style="display:none;">Просмотр погоды в реальном времени.</span><span class="lang-en"
+								style="display:none;">Real-time weather data.</span></p>
+						<div class="project-links">
+							<a href="#" target="_blank" class="btn-sm primary-btn"><i class="fa-solid fa-globe"></i>
+								Demo</a>
+							<a href="#" target="_blank" class="btn-sm secondary-btn"><i class="fa-brands fa-github"></i>
+								Code</a>
+						</div>
+					</div>
 				</div>
-				<div class="project-card">
-					<img src="images/project1.png" alt="Study Task Tracker">
-					<h3>Study Task Tracker</h3>
-					<p><strong>Status:</strong> Planned — not completed<br><strong>Purpose:</strong> To help students
-						organize their daily tasks.<br><strong>Technologies:</strong> HTML, CSS, JavaScript.</p>
-					<a href="https://github.com/LOGIN/portfolio" target="_blank" class="project-link">GitHub'da
-						ko'rish</a>
+
+				<!-- 3-loyiha -->
+				<div class="project-card glass">
+					<div class="project-img">
+						<img src="https://via.placeholder.com/400x220/1f2937/0f766e?text=Task+Manager" alt="Loyiha 3">
+					</div>
+					<div class="project-info">
+						<h3><i class="fa-solid fa-list-check"></i> Task Manager App</h3>
+						<p><strong><span class="lang-uz">Muammo</span><span class="lang-ru"
+									style="display:none;">Проблема</span><span class="lang-en"
+									style="display:none;">Problem</span>:</strong> <span class="lang-uz">Kunlik
+								vazifalarni tartibga solish va unutmaslik muammosi.</span><span class="lang-ru"
+								style="display:none;">Проблема организации ежедневных задач.</span><span class="lang-en"
+								style="display:none;">Daily task organization issue.</span></p>
+						<p><strong><span class="lang-uz">Yechim</span><span class="lang-ru"
+									style="display:none;">Решение</span><span class="lang-en"
+									style="display:none;">Solution</span>:</strong> To-Do List veb ilovasi LocalStorage
+							yordamida.</p>
+						<p><strong><span class="lang-uz">Natija</span><span class="lang-ru"
+									style="display:none;">Результат</span><span class="lang-en"
+									style="display:none;">Result</span>:</strong> <span class="lang-uz">Vazifalarni
+								qo'shish, o'chirish va saqlab qolish imkoni.</span><span class="lang-ru"
+								style="display:none;">Удобное управление задачами.</span><span class="lang-en"
+								style="display:none;">Easy task management.</span></p>
+						<div class="project-links">
+							<a href="#" target="_blank" class="btn-sm primary-btn"><i class="fa-solid fa-globe"></i>
+								Demo</a>
+							<a href="#" target="_blank" class="btn-sm secondary-btn"><i class="fa-brands fa-github"></i>
+								Code</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
 
 		<!-- 5. Ta'lim va yutuqlar -->
 		<section id="education" class="education">
-			<h2>Ta'lim va Maqsadlar</h2>
-			<ul>
-				<li><strong>Ta'lim:</strong> High school student in Uzbekistan, learning web development and studying
-					HTML, CSS, and JavaScript.</li>
-				<li><strong>Kelajakdagi maqsadlar:</strong> Improve programming skills, build real-world IT projects,
-					and study computer science at university.</li>
-			</ul>
+			<div class="section-title">
+				<span><i class="fa-solid fa-award"></i> <span class="lang-uz">BO'LIM 5</span><span class="lang-ru"
+						style="display:none;">РАЗДЕЛ 5</span><span class="lang-en" style="display:none;">SECTION
+						5</span></span>
+				<h2><span class="lang-uz">Ta'lim va yutuqlar</span><span class="lang-ru"
+						style="display:none;">Образование и достижения</span><span class="lang-en"
+						style="display:none;">Education & Achievements</span></h2>
+			</div>
+			<div class="edu-grid">
+				<div class="edu-card glass">
+					<i class="fa-solid fa-school"></i>
+					<h3><span class="lang-uz">11-O'rta Maktab</span><span class="lang-ru" style="display:none;">Средняя
+							школа №11</span><span class="lang-en" style="display:none;">High School #11</span></h3>
+					<p><span class="lang-uz">Bitiruvchi sinf o'quvchisi (2015-2026)</span><span class="lang-ru"
+							style="display:none;">Ученик выпускного класса (2015-2026)</span><span class="lang-en"
+							style="display:none;">Graduating student (2015-2026)</span></p>
+				</div>
+				<div class="edu-card glass">
+					<i class="fa-solid fa-laptop-code"></i>
+					<h3>ITXiva o'quv markazi</h3>
+					<p><span class="lang-uz">Front-End Dasturlash kursi bitiruvchisi</span><span class="lang-ru"
+							style="display:none;">Выпускник курса Front-End</span><span class="lang-en"
+							style="display:none;">Front-End Course Graduate</span></p>
+				</div>
+				<div class="edu-card glass">
+					<i class="fa-solid fa-medal"></i>
+					<h3><span class="lang-uz">Olimpiada va Sertifikatlar</span><span class="lang-ru"
+							style="display:none;">Олимпиады и Сертификаты</span><span class="lang-en"
+							style="display:none;">Olympiads & Certificates</span></h3>
+					<p><span class="lang-uz">Informatika fanidan tuman bosqichi g'olibi va IT sertifikatlar</span><span
+							class="lang-ru" style="display:none;">Победитель районного этапа по информатике</span><span
+							class="lang-en" style="display:none;">District Informatics Olympiad Winner</span></p>
+				</div>
+			</div>
 		</section>
 
-		<!-- 6. Aloqa -->
+		<!-- 6. Aloqa va Xabar yuborish -->
 		<section id="contact" class="contact">
-			<h2>Aloqa</h2>
-			<p>Bog'lanish uchun quyidagi tarmoqlar orqali yozishingiz mumkin:</p>
-			<div class="social-links">
-				<a href="mailto:emailingiz@gmail.com" target="_blank">Email</a>
-				<a href="https://t.m/telegram_username" target="_blank">Telegram</a>
-				<a href="https://github.com/LOGIN" target="_blank">GitHub</a>
+			<div class="section-title">
+				<span><i class="fa-solid fa-paper-plane"></i> <span class="lang-uz">BO'LIM 6</span><span class="lang-ru"
+						style="display:none;">РАЗДЕЛ 6</span><span class="lang-en" style="display:none;">SECTION
+						6</span></span>
+				<h2><span class="lang-uz">Men bilan bog'laning</span><span class="lang-ru"
+						style="display:none;">Свяжитесь со мной</span><span class="lang-en" style="display:none;">Get in
+						Touch</span></h2>
+			</div>
+
+			<div class="contact-wrapper">
+				<!-- Ijtimoiy tarmoqlar kartalari -->
+				<div class="contact-cards">
+					<a href="mailto:matkaimovislambek@gmail.com" class="contact-card glass">
+						<i class="fa-solid fa-envelope" style="color: #ea4335;"></i>
+						<h3>Email</h3>
+						<p>matkaimovislambek@gmail.com</p>
+					</a>
+					<a href="https://t.me/mtkrmv07" target="_blank" class="contact-card glass">
+						<i class="fa-brands fa-telegram" style="color: #229ed9;"></i>
+						<h3>Telegram</h3>
+						<p>@mtkrmv07</p>
+					</a>
+					<a href="https://github.com/islombek175" target="_blank" class="contact-card glass">
+						<i class="fa-brands fa-github" style="color: #fff;"></i>
+						<h3>GitHub</h3>
+						<p>github.com/islombek175</p>
+					</a>
+					<a href="https://linkedin.com" target="_blank" class="contact-card glass">
+						<i class="fa-brands fa-linkedin" style="color: #0a66c2;"></i>
+						<h3>LinkedIn</h3>
+						<p>islombek-matkarimov</p>
+					</a>
+				</div>
+
+				<!-- Xabar yuborish formasi -->
+				<div class="contact-form-box glass">
+					<h3><i class="fa-solid fa-message"></i> <span class="lang-uz">Menga xabar qoldiring</span><span
+							class="lang-ru" style="display:none;">Оставьте мне сообщение</span><span class="lang-en"
+							style="display:none;">Leave me a message</span></h3>
+					<form id="contactForm">
+						<div class="form-group">
+							<input type="text" id="senderName" placeholder="Ismingiz / Имя / Name" required>
+						</div>
+						<div class="form-group">
+							<input type="email" id="senderEmail" placeholder="Email manzilingiz / Email" required>
+						</div>
+						<div class="form-group">
+							<textarea id="senderMessage" rows="4" placeholder="Xabaringiz / Сообщение / Message"
+								required></textarea>
+						</div>
+						<button type="submit" class="btn primary-btn"><i class="fa-solid fa-paper-plane"></i> <span
+								class="lang-uz">Xabar yuborish</span><span class="lang-ru"
+								style="display:none;">Отправить</span><span class="lang-en" style="display:none;">Send
+								Message</span></button>
+					</form>
+					<p id="formStatus" style="margin-top: 15px; color: #10b981; font-weight: 500; display: none;"></p>
+				</div>
 			</div>
 		</section>
 	</main>
 
+	<!-- Footer -->
 	<footer>
-		<p>&copy; 2026 Sunnatbek. Barcha huquqlar himoyalangan.</p>
+		<p>&copy; 2026 Ismingiz Familiyangiz. <span class="lang-uz">Barcha huquqlar himoyalangan.</span><span
+				class="lang-ru" style="display:none;">Все права защищены.</span><span class="lang-en"
+				style="display:none;">All rights reserved.</span></p>
 	</footer>
 
+	<!-- JavaScript fayl -->
 	<script src="script.js"></script>
 </body>
 
