@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Kalkulyator</title>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="wrap">
+		<div class="top">
+			<h1><i class="fa-solid fa-calculator"></i>Kalkulyator</h1><a class="back" href="../../index.html"><i
+					class="fa-solid fa-arrow-left"></i> Portfolio</a>
+		</div>
+		<div class="glass calc">
+			<div class="screen">
+				<div id="exp"></div>
+				<div id="res">0</div>
+			</div>
+			<div class="keys">
+				<button class="ac" data-k="ac">AC</button><button class="fn" data-k="del"><i
+						class="fa-solid fa-delete-left"></i></button><button class="fn" data-k="%">%</button><button
+					class="op" data-k="/">÷</button>
+				<button data-k="7">7</button><button data-k="8">8</button><button data-k="9">9</button><button
+					class="op" data-k="*">×</button>
+				<button data-k="4">4</button><button data-k="5">5</button><button data-k="6">6</button><button
+					class="op" data-k="-">−</button>
+				<button data-k="1">1</button><button data-k="2">2</button><button data-k="3">3</button><button
+					class="op" data-k="+">+</button>
+				<button class="fn" data-k="sign">±</button><button data-k="0">0</button><button
+					data-k=".">.</button><button class="eq" data-k="=">=</button>
+			</div>
+			<div class="hist">
+				<h3><span><i class="fa-solid fa-clock-rotate-left"></i> Tarix</span><button id="clr"><i
+							class="fa-solid fa-trash"></i> Tozalash</button></h3>
+				<ul id="hl"></ul>
+			</div>
+		</div>
+	</div>
+	<script src="app.js"></script>
+</body>
+
+</html>
